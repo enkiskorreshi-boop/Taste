@@ -1,0 +1,11 @@
+{
+ "page": "index.html",
+ "url": null,
+ "root": null,
+ "kind": "service",
+ "category": "concessionaria auto multimarca e officina",
+ "primary": "Prenota un appuntamento",
+ "rounds": 3,
+ "start": "2026-11-16T00:10:21.414Z",
+ "by": "gate.mjs --start"
+}

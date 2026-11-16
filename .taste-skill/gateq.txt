@@ -1,0 +1,10 @@
+gate: checking index.html (service); this takes a few minutes on a CPU Chrome
+gate (quick look at 1440 and 390): 2 FAIL
+  FAIL no-visual        section#sedi "Diciotto sedi nel Nord-Ovest. Sei hanno "  [390]
+       pictures, effects and mocks cover 12% of this section; a feature section needs a visual (about 25% or more)
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL photo-upscale    div.grid.grid--top > div.span-6:nth-of-type(1) > figure.prenota__photo > img "img: Due cli  [390]
+       trattativa-800.jpg: 390x260 shown at 342x428, blown up 1.64x
+       fix: use a source at least as wide as the picture is shown (twice that for sharp screens)
+  13 WARN (not blocking), first: scroll-reveal section#officina > div.wrap > div.grid.g; scroll-reveal section#gruppo > div.wrap > p.mo-wh__tex; copy-buttons header.nav.nav--split > div.wrap.nav__ba; section-gaps section#servizi / section#storia; section-gaps section#prenota / footer#contact
+GATE: QUICK 2 (not a round; run without --quick to finish)

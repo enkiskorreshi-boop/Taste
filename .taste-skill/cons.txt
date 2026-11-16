@@ -1,0 +1,120 @@
+consistency  /home/user/Taste/index.html
+--quick: not checked: scroll-linked (stepping), scroll-reveal (the reveal walk; IntersectionObserver reveals are read), hover-spill, hidden-visual, loop-pause, forms, reduced-motion, the dead-IntersectionObserver walk (hidden content is read with scripts off and under reduced motion), hover-move. Still told: IntersectionObserver reveals (scroll-reveal), held sections (pinned) and CSS scroll timelines (scroll-linked); faults inside held or [data-big-scene] sections are WARNs
+
+1440x900  12 screens  0 FAIL  9 WARN
+  WARN scroll-reveal   section#officina > div.wrap > div.grid.grid--top > figure.develop.span-6
+       starts an animation (1.6 s) the moment it is scrolled into view (an IntersectionObserver) on img (inside a dealt moment's section, [data-moment]: an enter moment is expected on every kind; its still is judged under reduced motion)  [1440-04-scroll-reveal.jpg]
+       fix: show it at rest: no fade, rise or unmask when it is scrolled into view
+  WARN scroll-reveal   section#gruppo > div.wrap > p.mo-wh__text  "Vendiamo auto dal 1950. In 75 anni siamo"
+       starts "color" (0.2 s) the moment it is scrolled into view (an IntersectionObserver) on span.mo-w:nth-of-type(1) (inside a dealt moment's section, [data-moment]: an enter moment is expected on every kind; its still is judged under reduced motion)  [1440-05-scroll-reveal.jpg]
+       fix: show it at rest: no fade, rise or unmask when it is scrolled into view
+  WARN copy-buttons    header.nav.nav--split > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary  "Prenota un appuntamento"
+       "Prenota un appuntamento" does not start with a verb (book, buy, try, start, get, see...)  [1440-01-copy-buttons.jpg]
+       fix: label buttons with a verb and what the visitor gets ("Book a room", "Start free trial")
+  WARN section-gaps    section#servizi / section#storia
+       248px between these sections, +26% against the median 197px of gaps at a change of ground  [1440-06-section-gaps.jpg]
+       fix: use one gap between sections (all within 25% of each other)
+  WARN section-gaps    section#prenota / footer#contact
+       uneven space at the edge of a band: 79px outside its edge, 122px inside it (the space on either side of a change of ground reads as one gap only when the two match)  [1440-08-section-gaps.jpg]
+       fix: use one gap between sections (all within 25% of each other)
+  WARN nav-labels      div.wrap.nav__bar > nav.nav__links > div.nav__item:nth-of-type(4) > a.nav__link  "Servizi"
+       "Servizi" opens a section headed "Finanziamenti, noleggio e pratiche auto"  [1440-02-nav-labels.jpg]
+       fix: name each nav link after the heading of the section it opens
+  WARN nav-current     header.nav.nav--split
+       the nav stays on screen with 4 links to the page's sections, but never marks the one you are in (no link changes as the page scrolls)  [1440-03-nav-current.jpg]
+       fix: mark the link of the section on screen (a colour, a weight or a line under it) as the visitor scrolls
+  WARN action-repeat   header.nav.nav--split > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary  "prenota un appuntamento"
+       "prenota un appuntamento" shows 2 times on the first screen at 1440px (nav, hero): the nav's button and the hero's; nothing else on the screen may repeat it  [1440-09-action-repeat.jpg]
+       fix: show the action once a screen besides the nav's button: the hero's, the close's or the phone bar's, never all at once
+  WARN form-send       div.wrap > div.grid.grid--top > div.span-6.start-7:nth-of-type(2) > form.form  "mailto:appuntamenti@autoalpina.example"
+       the form opens a mail to appuntamenti@autoalpina.example: a stand-in until the client gives its form address; list it in the report  [1440-07-form-send.jpg]
+       fix: send the form to the client's address (data-endpoint) and show the confirmation only after it answers; list a mailto stand-in in the report
+
+390x844  16 screens  1 FAIL  9 WARN
+  FAIL no-visual       section#sedi  "Diciotto sedi nel Nord-Ovest. Sei hanno "
+       pictures, effects and mocks cover 12% of this section; a feature section needs a visual (about 25% or more)  [390-03-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  WARN nav             header.nav.nav--split > div.wrap.nav__bar > button.nav__toggle
+       the nav is lopsided: its last item ends 13px inside the content's edge (366px), while its first starts on the other edge  [390-01-nav.jpg]
+       fix: start the nav's first item and end its last on the content's two edges
+  WARN scroll-reveal   section#officina > div.wrap > div.grid.grid--top > figure.develop.span-6
+       starts an animation (1.6 s) the moment it is scrolled into view (an IntersectionObserver) on img (inside a dealt moment's section, [data-moment]: an enter moment is expected on every kind; its still is judged under reduced motion)  [390-04-scroll-reveal.jpg]
+       fix: show it at rest: no fade, rise or unmask when it is scrolled into view
+  WARN scroll-reveal   section#gruppo > div.wrap > p.mo-wh__text  "Vendiamo auto dal 1950. In 75 anni siamo"
+       starts "color" (0.2 s) the moment it is scrolled into view (an IntersectionObserver) on span.mo-w:nth-of-type(1) (inside a dealt moment's section, [data-moment]: an enter moment is expected on every kind; its still is judged under reduced motion)  [390-06-scroll-reveal.jpg]
+       fix: show it at rest: no fade, rise or unmask when it is scrolled into view
+  WARN section-gaps    main#top > section.hero.hero--film / section#sedi
+       121px between these sections, -51% against the median 246px  [390-02-section-gaps.jpg]
+       fix: use one gap between sections (all within 25% of each other)
+  WARN section-gaps    section#servizi / section#storia
+       479px between these sections, +48% against the median 324px of gaps at a change of ground  [390-07-section-gaps.jpg]
+       fix: use one gap between sections (all within 25% of each other)
+  WARN section-gaps    section#storia / section#prenota
+       360px between these sections, +46% against the median 246px  [390-09-section-gaps.jpg]
+       fix: use one gap between sections (all within 25% of each other)
+  WARN section-gaps    section#prenota / footer#contact
+       437px between these sections, +35% against the median 324px of gaps at a change of ground  [390-10-section-gaps.jpg]
+       fix: use one gap between sections (all within 25% of each other)
+  WARN section-gaps    section#servizi / section#storia
+       uneven space at the edge of a band: 97px outside its edge, 382px inside it (the space on either side of a change of ground reads as one gap only when the two match)  [390-08-section-gaps.jpg]
+       fix: use one gap between sections (all within 25% of each other)
+  WARN empty-area      section#officina  "Officina, gomme e carrozzeria"
+       39% of the section is empty: 592px under its last (figure.develop.span-6), in its 1491px of rows (WARN over 35%, FAIL over 50%)  [390-05-empty-area.jpg]
+       fix: fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)
+
+first screen at 1280, 1152, 1024, 896, 768  0 FAIL  0 WARN
+
+the page at 320x640, walked for what runs past the screen's edge  0 FAIL
+
+checks
+  PASS assets                 PASS shader-lint            PASS gl-fallback            
+  PASS empty-visual           PASS hero-fill              PASS flush                  
+  PASS placeholder            PASS sample-label           PASS caption                
+  PASS credit-wall            WARN nav                    PASS nav-covers             
+  PASS spill                  PASS off-viewport           PASS fold-card              
+  SKIP hover-spill            PASS overlap-text           PASS collide                
+  PASS tap-size               PASS row-gap                PASS cut-text               
+  PASS fold-cut               PASS marquee                SKIP scroll-linked          
+  WARN scroll-reveal          PASS pinned                 SKIP loop-pause             
+  SKIP reduced-motion         PASS hidden-content         PASS webgl                  
+  FAIL no-visual              PASS text-only              PASS card-visual            
+  SKIP hidden-visual          PASS card-family            PASS card-layout            
+  PASS nesting                PASS effect-repeat          PASS ui-fit                 
+  PASS ui-centre              PASS dark-ground            PASS button-styles          
+  PASS button-shape           PASS same-action            PASS button-picture         
+  PASS cta                    PASS pricing-tiers          PASS copy-headline          
+  PASS copy-fact              PASS copy-headings          WARN copy-buttons           
+  PASS copy-actions           PASS heading-scale          PASS stagger                
+  PASS top-stagger            PASS off-grid               PASS col-edge               
+  PASS right-edge             PASS centre-axis            PASS tilt                   
+  PASS contrast               PASS text-contrast          PASS body-size              
+  PASS busy-ground            WARN section-gaps           PASS proximity              
+  PASS hole                   PASS links                  SKIP forms                  
+  PASS photo-upscale          PASS photo-set              PASS photo-credit           
+  PASS nav-family             WARN nav-labels             PASS link-styles            
+  PASS heading-align          PASS label-centre           PASS fake-button            
+  PASS stranded-action        PASS orphan                 PASS unit-break             
+  PASS tab-wrap               PASS effects-fit            PASS fade-cut               
+  PASS photo-weight           PASS copy-length            WARN nav-current            
+  PASS progress-bar           PASS photo-repeat           PASS button-contrast        
+  PASS photo-print            PASS grounds                PASS split-align            
+  PASS fact-agree             PASS fold-action            PASS action-count           
+  PASS one-screen             SKIP hover                  SKIP hover-move             
+  PASS product-shown          PASS same-object            PASS font-load              
+  PASS visual-caption         PASS visual-empty           PASS effect-kind            
+  PASS hero-enter             PASS moment-none            PASS street-number          
+  PASS postcode               PASS coordinates            PASS company-number         
+  PASS phone-number           PASS hero-screen            PASS section-height         
+  PASS section-air            PASS one-section            PASS one-heading            
+  PASS container-edges        PASS row-lines              PASS split-pair             
+  PASS motion-layer           PASS count-text             PASS loop-cycle             
+  PASS section-tile           WARN empty-area             PASS a11y-name              
+  PASS img-alt                PASS field-label            PASS heading-order          
+  PASS tabindex               PASS focus-ring             PASS focus-visible          
+  PASS focus-hidden           PASS skip-link              PASS menu-toggle            
+  PASS lang                   PASS page-meta              PASS share-meta             
+  WARN action-repeat          PASS map-link               PASS open-now               
+  PASS assumed                PASS run-on                 PASS form-fields            
+  WARN form-send              
+
+total  1 FAIL  18 WARN  (crops and report.json in /home/user/Taste/.taste-skill/consistency)
